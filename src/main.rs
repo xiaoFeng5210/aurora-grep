@@ -9,5 +9,7 @@ fn main() {
         Err(err) => panic!("Problem parsing arguments: {}", err),
     };
     let read_line = match_parse.search();
-    println!("{}", read_line);
+    if !read_line.contains("No result") {
+        match_parse.openSearchFile();
+    }
 }
