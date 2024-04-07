@@ -3,6 +3,7 @@ use std::env;
 
 fn main() {
     let args = env::args();
+    dbg!("{:?}", &args);
     let data = Parse::new(args);
     let match_parse = match data {
         Ok(data) => data,
@@ -10,6 +11,7 @@ fn main() {
     };
     let read_line = match_parse.search();
     if !read_line.contains("No result") {
-        match_parse.openSearchFile();
+        match_parse.open_search_file();
+        println!("搜索结果: {}", read_line);
     }
 }

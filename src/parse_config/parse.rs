@@ -30,12 +30,12 @@ impl Parse {
         })
     }
 
-    pub fn openSearchFile(&self) {
+    pub fn open_search_file(&self) {
         let file_path = Path::new(&self.filename);
         let display = file_path.display();
         match File::open(file_path) {
             Ok(_) => {
-                println!("打开文件成功, 路径: {}", display);
+                println!("文件路径: {}", display);
             }
             Err(_) => {
                 println!("打开文件失败, 路径: {}", display);
