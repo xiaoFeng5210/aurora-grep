@@ -4,8 +4,8 @@ use std::env;
 fn main() {
     let args = env::args();
     dbg!("{:?}", &args);
-    let data = Parse::new(args);
-    let match_parse = match data {
+    let result = Parse::new(args);
+    let match_parse = match result {
         Ok(data) => data,
         Err(err) => panic!("Problem parsing arguments: {}", err),
     };

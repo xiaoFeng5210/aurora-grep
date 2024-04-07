@@ -22,7 +22,7 @@ impl Parse {
 
         let filename = match args.next() {
             Some(arg) => arg,
-            None => return Err("Didn't get a file name"),
+            None => panic!("Didn't get a file name"),
         };
         Ok(Parse {
             query_str,
