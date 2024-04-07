@@ -4,8 +4,9 @@ use std::fs::File;
 use std::path::Path;
 // use std::env;
 
-#[derive(Debug)]
 
+
+#[derive(Debug)]
 pub struct Parse {
     pub query_str: String,
     pub filename: String,
